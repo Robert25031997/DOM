@@ -1,0 +1,83 @@
+:root {
+  --text-primary: #101d42;
+  --text-secondary: #fbb44c;
+  --text-dark: #2b2922;
+  --text-light: #eaeaea;
+  --text-white: #ffffff;
+
+  --bg-primary: #141e4c;
+  --bg-secondary: #dfedf5;
+  --bg-dark: #101d42;
+  --bg-light: #ffffff;
+  --button-color: #2bb686;
+}
+body {
+  background-color: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container {
+  background-color: var(--bg-primary);
+  width: 50%;
+
+  max-width: 800px;
+  border: 2px solid var(--text-secondary);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+.container h2 {
+  color: var(--text-light);
+  text-align: center;
+  margin-top: 0;
+}
+.container > div {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.container > .input,
+.container > .calculator-buttons,
+.container > #result {
+  width: calc(50% - 10px);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input input {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 3px;
+  border: 2px solid var(--text-secondary);
+}
+
+.calculator-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator-buttons button {
+  margin: 10px;
+}
+.container .calculator-buttons button {
+  color: var(--button-color);
+  border-radius: 8px;
+  border: 2px solid var(--text-secondary);
+}
+#result {
+  color: var(--text-light);
+}
